@@ -22,6 +22,26 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 <img width="2816" height="1536" alt="Gemini_Generated_Image_22u5od22u5od22u5" src="https://github.com/user-attachments/assets/07520805-e447-4be1-862d-ea6a7cc4796c" />
 
+## Pre-requisites : 
+
+#### Managed Infrastructure [Aiven Console](https://console.aiven.io/): 
+
+Aiven for Apache Kafka: A inkless kafka running cluster with SASL/SSL enabled.
+
+Aiven for OpenSearch: A running instance with Dashboards enabled.
+
+Aiven Kafka Connect: An active connector service integrated with the Kafka cluster.
+
+Aiven Karapace: The Schema Registry service enabled to host the Avro data contracts.
+
+#### Local Development Environment: 
+
+Python 3.8+: Installed with the following libraries:
+
+confluent-kafka: For high-performance Kafka communication.
+
+fastavro: To handle binary Avro serialization.
+
 
 
 
