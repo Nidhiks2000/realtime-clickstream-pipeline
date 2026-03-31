@@ -1,7 +1,7 @@
 {
     "connection.username": "avnadmin",
-    "connection.password": "AVNS_r7NTyR2JM_Slen_-F5o",
-    "connection.url": "https://os-9eaa6da-nidhiks-830e.e.aivencloud.com:14697",
+    "connection.password": <password>,
+    "connection.url": "https://<opensearch_host>:14697",
     "key.ignore": "true",
     "schema.ignore": "true",
     "behavior.on.null.values": "ignore",
@@ -9,9 +9,9 @@
     "connector.class": "io.aiven.kafka.connect.opensearch.OpensearchSinkConnector",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
-    "value.converter.schema.registry.url": "https://clickstream-nidhiks-830e.e.aivencloud.com:14702",
+    "value.converter.schema.registry.url": "https://<kafka_host>:14702",
     "value.converter.basic.auth.credentials.source": "USER_INFO",
-    "value.converter.schema.registry.basic.auth.user.info": "avnadmin:AVNS_zSsUj5Y9A4MEXlDginI",
+    "value.converter.schema.registry.basic.auth.user.info": "avnadmin:<password>",
     "topics": "clickstream",
     "write.method": "insert"
 }
