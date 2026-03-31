@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "ClickstreamEvent",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "string",
+        "logicalType": "timestamp-iso8601"
+      }
+    },
+    {
+      "name": "event_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "session_id",
+      "type": "string"
+    },
+    {
+      "name": "action",
+      "type": "string"
+    },
+    {
+      "name": "page_url",
+      "type": "string"
+    },
+    {
+      "name": "device",
+      "type": "string"
+    },
+    {
+      "name": "browser",
+      "type": "string"
+    },
+    {
+      "name": "response_time_ms",
+      "type": "int"
+    },
+    {
+      "name": "geo_location",
+      "type": "string"
+    }
+  ]
+}
