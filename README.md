@@ -16,7 +16,10 @@ Track the response_time_ms for every click. If the site slows down, the Gauge Vi
  Automatically categorizes every interaction by country (e.g., IN, US, UK), allowing stakeholders to visualize market penetration and global user distribution in sub-seconds.
 
 #### Behavioral Tracking: 
-Live monitoring of specific user actions (view_page, add_to_cart, purchase) to identify high-traffic areas of the platform instantly.
+Live monitoring of specific user actions (view_page, add_to_cart, purchase) to identify high-traffic areas of the platform instantly
+
+<img width="1512" height="745" alt="Screenshot 2026-03-31 at 11 00 46 PM" src="https://github.com/user-attachments/assets/bea140e6-c7df-4d17-a5e6-6339bfa11d9b" />
+
 
 ## Technical Architecture :
 
