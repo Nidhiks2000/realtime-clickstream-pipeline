@@ -29,21 +29,46 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 #### Managed Infrastructure ([Aiven Console](https://console.aiven.io/)): 
 
-1. Aiven for Apache Kafka: A inkless kafka running cluster with SASL/SSL enabled.
+1. **Aiven for Apache Kafka**: A inkless kafka running cluster with SASL/SSL enabled.
 
-2. Aiven Kafka Connect: An active connector service integrated with the Kafka cluster.
+2. **Aiven Kafka Connect**: An active connector service integrated with the Kafka cluster.
 
-3. Aiven Karapace: The Schema Registry service enabled to host the Avro data contracts.
+3. **Aiven Karapace**: The Schema Registry service enabled to host the Avro data contracts.
 
-4. Aiven for OpenSearch: A running instance with Dashboards enabled.
+4. **Aiven for OpenSearch**: A running instance with Dashboards enabled.
 
 #### Local Development Environment: 
 
-1. Python 3.8+: Installed with the following libraries:
+1. **Python 3.8+**: Installed with the following libraries:
 
-2. confluent-kafka: For high-performance Kafka communication.
+2. **confluent-kafka**: For high-performance Kafka communication.
 
-3. fastavro: To handle binary Avro serialization.
+3. **fastavro**: To handle binary Avro serialization.
+
+##  Deployment & Setup Guide
+
+#### 1. Kafka & Schema Registry Configuration
+* **Create Topic:** In the Aiven Kafka console, create a topic named `clickstream`. Set the **Cleanup Policy** to `delete` (Diskless).
+* **Enable Schema Registry:** Create a schema subject named `clickstream-data` and upload the [clickstream-data.avsc](https://github.com/Nidhiks2000/realtime-clickstream-pipeline/blob/main/clickstream-data.avsc) definition.
+
+#### 2. Producer Initialization
+* **Update Credentials:** Update the `service_uri`, `user`, and `password` in [clickstream-producer.py](https://github.com/Nidhiks2000/realtime-clickstream-pipeline/blob/main/clickstream-producer.py).
+* **Execute Script:** Run the producer to start streaming validated events:
+  ```bash
+  python3 clickstream-producer.py
+
+ #### 3. OpenSearch Integration (Kafka Connect)
+* **Sink Configuration:** Activate the **OpenSearch Sink Connector** within the Kafka Connect service. Use the configuration parameters provided in [opensearch_connector_config.json](https://github.com/Nidhiks2000/realtime-clickstream-pipeline/blob/main/opensearch_connector_config.json).
+* **Verification:** Navigate to **OpenSearch Service > Indexes** in the Aiven Console. Once the connector is active, you will see the `clickstream` index appearing with live storage updates, confirming data is being successfully ingested.
+
+#### 4. Dashboards & Visualization
+* **Access UI:** Launch the **OpenSearch Dashboards** URL found in your Aiven OpenSearch service overview.
+* **Create Index Pattern:** 1. Navigate to **Dashboards Management > Index Patterns**.
+    2. Create a new pattern named `clickstream`.
+    3. Select `@timestamp` as the primary time field to enable time-series analysis.
+* **Build Insights:** Navigate to the **Visualize** tab to create real-time **Gauges** for performance monitoring and **Maps** for geographic traffic distribution.
+
+  
 
    
 
