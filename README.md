@@ -63,9 +63,14 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 #### 4. Dashboards & Visualization
 * **Access UI:** Launch the **OpenSearch Dashboards** URL found in your Aiven OpenSearch service overview.
-* **Create Index Pattern:** 1. Navigate to **Dashboards Management > Index Patterns**.
+  
+* **Create Index Pattern:**
+    1. Navigate to **Dashboards Management > Index Patterns**.
+  
     2. Create a new pattern named `clickstream`.
+  
     3. Select `@timestamp` as the primary time field to enable time-series analysis.
+       
 * **Build Insights:** Navigate to the **Visualize** tab to create real-time **Gauges** for performance monitoring and **Maps** for geographic traffic distribution.
 
   
