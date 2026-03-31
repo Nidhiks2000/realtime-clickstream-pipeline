@@ -24,7 +24,7 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 ## Pre-requisites : 
 
-#### Managed Infrastructure [Aiven Console](https://console.aiven.io/): 
+#### Managed Infrastructure ([Aiven Console](https://console.aiven.io/)): 
 
 1. Aiven for Apache Kafka: A inkless kafka running cluster with SASL/SSL enabled.
 
