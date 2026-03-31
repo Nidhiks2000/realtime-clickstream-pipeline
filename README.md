@@ -18,9 +18,6 @@ Track the response_time_ms for every click. If the site slows down, the Gauge Vi
 #### Behavioral Tracking: 
 Live monitoring of specific user actions (view_page, add_to_cart, purchase) to identify high-traffic areas of the platform instantly
 
-<img width="1512" height="745" alt="Screenshot 2026-03-31 at 11 00 46 PM" src="https://github.com/user-attachments/assets/bea140e6-c7df-4d17-a5e6-6339bfa11d9b" />
-
-
 ## Technical Architecture :
 
 <img width="2816" height="1536" alt="Gemini_Generated_Image_22u5od22u5od22u5" src="https://github.com/user-attachments/assets/07520805-e447-4be1-862d-ea6a7cc4796c" />
@@ -73,6 +70,7 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
        
 * **Build Insights:** Navigate to the **Visualize** tab to create real-time **Gauges** for performance monitoring and **Maps** for geographic traffic distribution.
 
+<img width="1512" height="745" alt="Screenshot 2026-03-31 at 11 00 46 PM" src="https://github.com/user-attachments/assets/bea140e6-c7df-4d17-a5e6-6339bfa11d9b" />
   
 
    
