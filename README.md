@@ -23,6 +23,23 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 <img width="2816" height="1536" alt="Gemini_Generated_Image_22u5od22u5od22u5" src="https://github.com/user-attachments/assets/07520805-e447-4be1-862d-ea6a7cc4796c" />
 
+## Data Journey : 
+
+#### The Data Journey:
+   A high-concurrency Python script simulates global user interactions, generating events enriched with geographic and performance metadata.
+
+### Schema Validation (Aiven Karapace): 
+   Before reaching the topic, events are serialized using Apache Avro. Karapace acts as the "Gatekeeper," ensuring every message adheres to a strict     data contract.
+
+### The Backbone (Aiven for Apache Kafka): 
+   Kafka serves as the distributed buffer, decoupling the high-speed producer from the storage layer. This    ensures the system remains resilient       during traffic spikes.
+
+### Automated ETL (Aiven Kafka Connect): 
+   An OpenSearch Sink Connector performs a real-time, "no-code" transfer of data from Kafka topics into the search index.
+
+### Analytics & Visualization (OpenSearch Dashboards): 
+   The raw stream is indexed and transformed into actionable Time-Series Dashboards, providing the sub-second visibility required for business           decisions.
+
 ## Pre-requisites : 
 
 #### Managed Infrastructure ([Aiven Console](https://console.aiven.io/)): 
