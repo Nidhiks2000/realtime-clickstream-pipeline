@@ -15,10 +15,10 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 ca_path = os.path.join(base_dir, 'ca.pem')
 
 
-KAFKA_SERVICE_URI = 'clickstream-nidhiks-830e.e.aivencloud.com:14710'
-SCHEMA_REGISTRY_URI = 'https://clickstream-nidhiks-830e.e.aivencloud.com:14702'
+KAFKA_SERVICE_URI = '<kafka_host>:14710'
+SCHEMA_REGISTRY_URI = 'https://<kafka_host>:14702'
 USERNAME = 'avnadmin'
-PASSWORD = 'AVNS_zSsUj5Y9A4MEXlDginI'
+PASSWORD = <password>
 CA_PEM_PATH = ca_path  
 
 TOPIC_NAME = 'clickstream'
@@ -73,7 +73,6 @@ def generate_click_event():
 def main():
     create_topic_if_not_exists()
 
-    # Initialize Schema Registry Client
     sr_conf = {
         'url': SCHEMA_REGISTRY_URI,
         'basic.auth.user.info': f"{USERNAME}:{PASSWORD}"
@@ -107,7 +106,7 @@ def main():
             )
             
             producer.poll(0)
-            time.sleep(random.uniform(0.5, 1.5)) # Simulate realistic traffic pace
+            time.sleep(random.uniform(0.5, 1.5)) 
 
     except KeyboardInterrupt:
         print("\nFlushing records and shutting down...")
