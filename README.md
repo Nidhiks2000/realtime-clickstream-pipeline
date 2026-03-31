@@ -39,7 +39,7 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 #### Local Development Environment: 
 
-1. **Python 3.8+**: Installed with the following libraries:
+1. **Python 3.8+**: Installed with the below libraries
 
 2. **confluent-kafka**: For high-performance Kafka communication.
 
