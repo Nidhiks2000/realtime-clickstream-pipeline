@@ -26,21 +26,23 @@ Live monitoring of specific user actions (view_page, add_to_cart, purchase) to i
 
 #### Managed Infrastructure [Aiven Console](https://console.aiven.io/): 
 
-Aiven for Apache Kafka: A inkless kafka running cluster with SASL/SSL enabled.
+1. Aiven for Apache Kafka: A inkless kafka running cluster with SASL/SSL enabled.
 
-Aiven for OpenSearch: A running instance with Dashboards enabled.
+2. Aiven Kafka Connect: An active connector service integrated with the Kafka cluster.
 
-Aiven Kafka Connect: An active connector service integrated with the Kafka cluster.
+3. Aiven Karapace: The Schema Registry service enabled to host the Avro data contracts.
 
-Aiven Karapace: The Schema Registry service enabled to host the Avro data contracts.
+4. Aiven for OpenSearch: A running instance with Dashboards enabled.
 
 #### Local Development Environment: 
 
-Python 3.8+: Installed with the following libraries:
+1. Python 3.8+: Installed with the following libraries:
 
-confluent-kafka: For high-performance Kafka communication.
+2. confluent-kafka: For high-performance Kafka communication.
 
-fastavro: To handle binary Avro serialization.
+3. fastavro: To handle binary Avro serialization.
+
+   
 
 
 
