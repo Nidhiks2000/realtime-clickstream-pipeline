@@ -1,4 +1,5 @@
-# Real-Time Clickstream Monitoring
+# Real time clickstream data pipeline using Aiven 
+
 
 ## Usecase :
 
